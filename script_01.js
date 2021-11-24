@@ -2,7 +2,7 @@
 
 /* Theorie ARRAY */
 
-let arr;
+// let arr;
 
 // arr = new Array(); // Konstruktor
 
@@ -27,43 +27,105 @@ let arr;
 // ---> "Ich bin Thomas Sonntag"
 
 // output(getSentence("Ich","bin","Thomas","Sonntag"))
-function getSentence(wort1,wort2,wort3,wort4) {
+// function getSentence(wort1,wort2,wort3,wort4) {
 
-    const gap = " ";
-    const pkt = ".";
-    const str = wort1 + gap + 
-                wort2 + gap + 
-                wort3 + gap + 
-                wort4 +
-                pkt;
+//     const gap = " ";
+//     const pkt = ".";
+//     const str = wort1 + gap + 
+//                 wort2 + gap + 
+//                 wort3 + gap + 
+//                 wort4 +
+//                 pkt;
 
-    return str  //"Ich bin Thomas Sonntag"
-}
+//     return str  //"Ich bin Thomas Sonntag"
+// }
 
 /*** 01a. Funktionalität mit Array 1 */
 
 // output(getSentenceArr(["Ich","bin","Thomas","Sonntag"]))
-function getSentenceArr(arr) {
+// function getSentenceArr(arr) {
+
+//     const gap = " ";
+//     const pkt = ".";
+//     const str = arr[0] + gap + 
+//                 arr[1] + gap + 
+//                 arr[2] + gap + 
+//                 arr[3] +
+//                 pkt;
+
+//     return str;
+// }
+
+/*** 01b. Funktionalität mit Array 2 */
+
+// Transponieren: Untereinander --> Nebeneinander 
+
+
+output(getSentenceArr2(["Ich","bin","Thomas","Sonntag"]));
+output(getSentenceArr2(["Ich","bin","Thomas","Sonntag","und"]));
+output(getSentenceArr2(["Ich","bin","Thomas","Sonntag","und","lebe"]));
+output(getSentenceArr2(["Ich","bin","Thomas","Sonntag","und","lebe","in"]));
+
+function getSentenceArr2(arr) {
 
     const gap = " ";
     const pkt = ".";
-    const str = arr[0] + gap + 
-                arr[1] + gap + 
-                arr[2] + gap + 
-                arr[3] +
-                pkt;
+    let str = "";
+
+    for (let i = 0; i < arr.length; i++) {
+
+        if (i != arr.length-1) {
+            str += arr[i] + gap;
+        } else {
+            str += arr[i] + pkt;
+        }        
+    }
+ 
 
     return str;
 }
+
+// let str = ""; // Anfangswert
+// const addStr = "Test";
+// const gab = " "
+
+// for (let i = 0; i < 5; i++) {
+//     // output("in der loop " + str);
+//     str = str + addStr + gab;
+// }
+// output("in der loop " + str);
+
 
 
 /******* 02a Theorie: Schleifen (for-schleife) *******/
 
 /* schleife als Wiederholungs-Struktur */
 
-for (let i = 0; i < 4; i++) {  // Beginn (let i=0) Ende (i<4) // i++ aufwärtszählen von i
-    output(i)    
-}
+// Inkrement (untere Grenze --> obere Grenze)
+// for (let i = 0; i < 10; i++) {
+//      output(i);
+// }
+
+// Dekrement (obere Grenze --> untere Grenze)
+// for (let i = 10; i > 0; i--) {
+//     output(i);
+// }
+
+// Inkrement (var. Schrittweite)
+// for (let i = 0; i < 100; i+=10) {
+    // output(i);
+// }
+
+
+/* For-Schleife für Array-Index (Iteration) */
+
+let arr = ["Ich","bin","der","coole","Thomas","Sonntag"]
+// for (let i = 0; i < arr.length; i++) {
+//        output(arr[i]);
+// }
+    
+
+
 
 
 

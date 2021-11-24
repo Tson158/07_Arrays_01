@@ -57,7 +57,13 @@ function getSentenceArr(arr) {
 }
 
 
+/******* 02a Theorie: Schleifen (for-schleife) *******/
 
+/* schleife als Wiederholungs-Struktur */
+
+for (let i = 0; i < 4; i++) {  // Beginn (let i=0) Ende (i<4) // i++ aufwärtszählen von i
+    output(i)    
+}
 
 
 
